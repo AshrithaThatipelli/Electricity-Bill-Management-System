@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bills</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>All Electricity Bills</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>Units Consumed</th>
+            <th>Bill Amount</th>
+            <th>Billing Date</th>
+        </tr>
+        {% for bill in bills %}
+        <tr>
+            <td>{{ bill.id }}</td>
+            <td>{{ bill.user_id }}</td>
+            <td>{{ bill.units_consumed }}</td>
+            <td>Rs. {{ bill.bill_amount }}</td>
+            <td>{{ bill.billing_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

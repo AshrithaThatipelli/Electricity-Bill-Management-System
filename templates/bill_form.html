@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+    <h2>Enter Electricity Consumption</h2>
+    <form action="/calculate_bill" method="POST">
+        <label>User ID:</label>
+        <input type="number" name="user_id" required><br><br>
+
+        <label>Units Consumed:</label>
+        <input type="number" name="units" required><br><br>
+
+        <input type="submit" value="Calculate Bill">
+    </form>
+</body>
+</html>
